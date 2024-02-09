@@ -10,5 +10,19 @@ public class Commission extends Hourly{
         this.totalSales += totalSales;
     }
 
+    public double pay(){
+        double payment = super.pay() + (cRate*totalSales);
+        totalSales = 0;
+        return payment;
+    }
+
+    public String toString()
+    {
+        String result = super.toString();
+
+        result += "\nTotal Sales: " + totalSales;
+
+        return result;
+    }
 
 }
