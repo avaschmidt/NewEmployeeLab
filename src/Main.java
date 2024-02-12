@@ -11,7 +11,7 @@ public class Main
    //-----------------------------------------------------------------
    public static void main (String[] args)
    {   
-       StaffMember[] staffList = new StaffMember[6];
+       StaffMember[] staffList = new StaffMember[8];
 
       staffList[0] = new Executive ("Elliot", "123 Main Line",
          "555-0469", "123-45-6789", 2423.07);
@@ -28,12 +28,17 @@ public class Main
          "555-8374");
       staffList[5] = new Volunteer ("Carla", "321 Duds Lane",
          "555-7282");
-      
+      staffList[6] = new Commission("Bob","303 Bob Way", "303-9999","303-99-9999",6.25, 0.2);
+      staffList[7] = new Commission("Jimmy", "87 Jimmy St","222-2222","909-23-0987",9.75,0.15);
      //3 Write the code to award a bonus of 500 to Elliot
       ((Executive)staffList[0]).awardBonus(500);
       
       //4 Write the code to add 40 hours to Dr. Cox
       ((Hourly)staffList[3]).addHours(40);
+      ((Commission)staffList[6]).addHours(35);
+      ((Commission)staffList[6]).addSales(400);
+      ((Commission)staffList[7]).addHours(40);
+      ((Commission)staffList[7]).addSales(950);
    
 
    //-----------------------------------------------------------------
